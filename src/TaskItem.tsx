@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styles from "./TaskItem.module.css";
-import firebase from "firebase/app";
-import { FormControl, TextField, Grid, ListItem } from "@material-ui/core";
+import { TextField, Grid, ListItem } from "@material-ui/core";
 import DeleteOutlineOutlinedIcon from "@material-ui/icons/DeleteOutlineOutlined";
 import EditOutlinedIcon from "@material-ui/icons/EditOutlined";
 import { db } from "./firebase";

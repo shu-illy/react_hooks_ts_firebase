@@ -9,6 +9,13 @@ const Login: React.FC = (props: any) => {
   const [password, setPassword] = useState("");
 
   useEffect(() => {
+    const unSub = auth.onAuthStateChanged((user) => {
+      !user && props.history.push("login");
+    });
+    return () => unSub();
+  }, [props.history]);
+
+  useEffect(() => {
     auth.onAuthStateChanged((user) => {
       user && props.history.push("/");
     });
